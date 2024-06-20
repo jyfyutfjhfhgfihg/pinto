@@ -1,0 +1,22 @@
+/* styles.css */
+
+/* Estilo para a imagem de pneu */
+#imagemPneu {
+    cursor: pointer;
+    border-radius: 10px; /* Exemplo de estilo adicional */
+  }
+  
+  /* Estilo para o título */
+  h1 {
+    font-family: Arial, Comic Sans
+    ;
+    color: #333;
+  }
+  
+  /* Estilo para o parágrafo de descrição */
+  p {
+    font-family: Arial, Comic Sans
+    ;
+    color: #666;
+  }
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pinto</title>
+  <script>
+    // Função para incrementar o contador de cliques na imagem
+    function incrementarContador() {
+      if (localStorage.getItem('contadorCliquespinto')) {
+        var contador = parseInt(localStorage.getItem('contadorCliquespinto'));
+        localStorage.setItem('contadorCliquespinto', contador + 1);
+      } else {
+        localStorage.setItem('contadorCliquespinto', 1);
+      }
+      // Atualizar o texto do contador na página
+      document.getElementById('contadorpinto').textContent = localStorage.getItem('contadorCliquespinto');
+    }
+  </script>
+</head>
+<body>
+  <h1>Imagem de pinto</h1>
+  
+  <!-- Inserindo a imagem de pneu com função para incrementar o contador -->
+  <img src="pinto.jpg" alt="pinto" width="300" onclick="incrementarContador()" style="cursor: pointer;">
+  
+  <p>Clique na imagem do pinto para contar os cliques.</p>
+
+  <p>Contagem de cliques na imagem de pinto: <span id="contadorpinto">
+    <!-- Script para exibir o contador inicializado -->
+    <script>
+      if (localStorage.getItem('contadorCliquespinto')) {
+        document.getElementById('contadorpinto').textContent = localStorage.getItem('contadorCliquespinto');
+      } else {
+        document.getElementById('contadorpinto').textContent = '0';
+      }
+    </script>
+  </span></p>
+</body>
+</html>
